@@ -72,4 +72,10 @@ a {
     text-decoration: underline;
   }
 }
+
+pre {
+  background-color: black !important;
+  border-radius: 8px !important;
+  margin: 14px !important;
+}
 </style>
