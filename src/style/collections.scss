@@ -1,0 +1,42 @@
+.collection {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  align-content: stretch;
+  justify-content: stretch;
+}
+
+.collection-5 {
+  @extend .collection;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.collection-item {
+  padding-top: 75%;
+}
+
+@media (max-width: $small-breakpoint) {
+  .collection {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: $medium-breakpoint) and (min-width: $small-breakpoint) {
+  .collection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: $large-breakpoint) and (min-width: $medium-breakpoint) {
+  .collection {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: $extra-large-breakpoint) and (min-width: $large-breakpoint) {
+  .collection {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

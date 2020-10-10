@@ -1,0 +1,147 @@
+.page-main.nav {
+  height: calc(100% - #{$navbar-height * 2});
+  padding-top: $navbar-height;
+  padding-bottom: $navbar-height;
+}
+
+.nav {
+  padding-top: $navbar-height;
+}
+
+.nav-full {
+  padding-top: $navbar-height;
+  height: calc(100% - #{$navbar-height});
+}
+
+.navbar {
+  @extend .h-stack;
+  padding: 0px 20px;
+  height: $navbar-height;
+  justify-content: start;
+  background-color: $color-default-background;
+  color: $color-default-text;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  z-index: 10;
+}
+
+.navbar.separator {
+  border-bottom: solid 1px $color-separator;
+}
+
+.navbar.light {
+  color: $color-light-text;
+  background-color: $color-light-background;
+}
+
+.navbar.dark {
+  color: $color-dark-text;
+  background-color: $color-dark-background;
+}
+
+.navbar.absolute {
+  position: absolute !important;
+}
+
+.navbar a {
+  color: unset;
+  text-decoration: unset;
+  font-size: 20;
+}
+
+.navbar i {
+  color: $color-default-text;
+}
+
+.navbar.light i {
+  color: $color-light-text;
+}
+
+.navbar.dark i {
+  color: $color-dark-text;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+html:not([data-scroll="0"]) .navbar.shadow {
+  box-shadow: 0px 1px 5px 1px grey;
+}
+
+html[data-scroll="0"] .navbar.transparent {
+  background-color: transparent;
+  color: $color-navbar-text-transparent;
+}
+
+.navbar.transparent-always {
+  background-color: transparent !important;
+  color: $color-navbar-text-transparent !important;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.navbar.transparent-always > .nav-menu i {
+  color: $color-navbar-text-transparent !important;
+}
+
+html[data-scroll="0"] .navbar.transparent > .nav-menu i {
+  color: $color-navbar-text-transparent;
+}
+
+@media (max-width: $small-breakpoint) {
+  .nav-menu {
+    display: block;
+  }
+
+  .nav-menu-content {
+    display: none;
+    width: fit-content;
+    background-color: $color-default-background;
+    color: $color-default-text;
+  }
+
+  .navbar.light > .nav-menu-content {
+    background-color: $color-light-background;
+    color: $color-light-text;
+  }
+
+  .navbar.dark > .nav-menu-content {
+    background-color: $color-dark-background;
+    color: $color-dark-text;
+  }
+
+  .nav-menu-content.show {
+    display: grid;
+    grid-auto-flow: row;
+    position: absolute;
+    top: $navbar-height;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    height: unset;
+  }
+
+  .nav-menu-content > button {
+    min-width: 100%;
+    margin: 3px 0px;
+  }
+
+  .nav-menu-content * button {
+    min-width: 100%;
+    margin: 3px 0px;
+  }
+
+  .nav-menu-content > div {
+    min-width: 100%;
+  }
+
+  .nav-menu-content * div {
+    min-width: 100%;
+  }
+}

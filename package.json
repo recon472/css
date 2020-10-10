@@ -3,11 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "onchange \"**/*.scss\" \"**/*.js\" -- npm run copy",
+    "copy": "copy-files-from-to",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "copyFiles": [
+    {
+      "from": [
+        "./src/style/*.scss",
+        "./src/style/*.js"
+      ],
+      "to": "../livestream/src/style/"
+    },
+    {
+      "from": [
+        "./src/style/*.scss",
+        "./src/style/*.js"
+      ],
+      "to": "../spw/src/style/"
+    }
+  ],
+  "copyFilesSettings": {
+    "whenFileExists": "overwrite"
+  },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
@@ -18,9 +40,11 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
+    "copy-files-from-to": "^3.2.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.12.0",
+    "onchange": "^7.0.2",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   },

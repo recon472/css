@@ -1,0 +1,50 @@
+.pane-base {
+  display: grid;
+  align-content: stretch;
+  justify-content: stretch;
+}
+
+.pane-base.separator {
+  background-color: $color-separator;
+  gap: 1px;
+}
+
+.pane-base.separator > * {
+  background-color: $color-default-background;
+}
+
+.pane-right {
+  @extend .pane-base;
+  grid-auto-flow: column;
+  grid-template-columns: auto min-content;
+}
+
+.pane-left {
+  @extend .pane-base;
+  grid-auto-flow: column;
+  grid-template-columns: min-content auto;
+}
+
+.pane-top {
+  @extend .pane-base;
+  grid-auto-flow: row;
+  grid-template-rows: min-content auto;
+}
+
+.pane-bottom {
+  @extend .pane-base;
+  grid-auto-flow: row;
+  grid-template-rows: auto min-content;
+}
+
+.pane-vertical {
+  @extend .pane-base;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pane-horizontal {
+  @extend .pane-base;
+  grid-auto-flow: row;
+  grid-template-rows: 1fr 1fr;
+}

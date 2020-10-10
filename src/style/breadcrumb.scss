@@ -1,0 +1,46 @@
+.breadcrumb {
+  @extend .h-stack;
+  justify-content: start;
+  color: $color-default-link;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.breadcrumb.light {
+  color: $color-light-link;
+}
+
+.breadcrumb.dark {
+  color: $color-dark-link;
+}
+
+.breadcrumb > div::after {
+  color: $color-default-text;
+  content: "/";
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.breadcrumb.light > div::after {
+  color: $color-light-text;
+}
+
+.breadcrumb.dark > div::after {
+  color: $color-dark-text;
+}
+
+.breadcrumb > :last-child:after {
+  content: "";
+}
+
+.breadcrumb > .disabled {
+  color: $color-default-disabled;
+}
+
+.breadcrumb.light > .disabled {
+  color: $color-light-disabled;
+}
+
+.breadcrumb.dark > .disabled {
+  color: $color-dark-disabled;
+}

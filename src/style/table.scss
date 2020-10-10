@@ -1,0 +1,75 @@
+.table {
+  display: grid;
+  grid-auto-flow: row;
+  color: $color-default-text;
+}
+
+.table-header {
+  font-size: 12px;
+  padding: 10px;
+  font-weight: bold;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.table-row {
+  min-height: 30px;
+  position: relative;
+  font-size: 14px;
+  padding: 8px 10px;
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+}
+
+.table-row::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 1px;
+  width: calc(100% - 30px);
+  border-top: 1px solid $color-separator;
+}
+
+.table-row:last-of-type::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 1px;
+  width: calc(100% - 30px);
+  border-top: 1px solid $color-separator;
+}
+
+.table-row * :not(.selected) {
+  color: $color-default-text;
+}
+
+.table-row.selected {
+  background-color: $color-selected-background;
+  color: $color-selected-text;
+}
+
+.table-row.selected * {
+  color: $color-selected-text;
+}
+
+.no-touch .table-row.selected:hover {
+  filter: brightness(120%);
+  background-color: $color-selected-background;
+}
+
+.no-touch .table-row:hover {
+  background-color: $color-highlight;
+}
+
+.table-row.empty {
+  border-bottom: none;
+}
+
+.no-touch .table-row.empty:hover {
+  background-color: initial;
+}

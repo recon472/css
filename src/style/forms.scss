@@ -1,0 +1,38 @@
+form {
+    @extend .v-stack;
+}
+
+input {
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 100%;
+    border: 1px solid $color-separator;
+}
+
+textarea {
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 100%;
+    border: 1px solid $color-separator;
+    min-height: 100px;
+    resize: none;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+label {
+    color: $color-default-disabled;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.scroll-label {
+    text-overflow: clip;
+}

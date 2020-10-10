@@ -1,0 +1,133 @@
+// variables
+
+$default-margin: 10px !default;
+
+$color-separator: #ccc !default;
+$color-selected-background: gray;
+$color-selected-text: white;
+$color-highlight: #e4e5e8;
+
+$color-default-text: black;
+$color-default-background: white;
+$color-default-link: #1976d2 !default;
+$color-default-disabled: #a9a9a9 !default;
+
+$color-light-text: purple;
+$color-light-background: #eee;
+$color-light-link: red !default;
+$color-light-disabled: green !default;
+
+$color-dark-text: #e4e5e8;
+$color-dark-background: #1c1c1c;
+$color-dark-link: yellow !default;
+$color-dark-disabled: pink !default;
+
+$color-primary: #6065dc !default;
+$color-secondary: #484a51 !default;
+$color-warning: #eed202 !default;
+$color-success: #339900 !default;
+$color-error: #c0392b !default;
+
+$color-navbar-text-transparent: white !default;
+
+$small-breakpoint: 576px !default;
+$medium-breakpoint: 900px !default;
+$large-breakpoint: 992px !default;
+$extra-large-breakpoint: 1200px !default;
+
+$section-height: 600px !default;
+$navbar-height: 70px !default;
+
+html,
+body {
+  .light {
+    background-color: $color-light-background;
+    color: $color-light-text;
+  }
+
+  .dark {
+    background-color: $color-dark-background;
+    color: $color-dark-text;
+  }
+}
+
+.primary {
+  background-color: $color-primary !important;
+}
+
+.secondary {
+  background-color: $color-secondary !important;
+}
+
+.warning {
+  background-color: $color-warning !important;
+}
+
+.success {
+  background-color: $color-success !important;
+}
+
+.error {
+  background-color: $color-error !important;
+}
+
+.text-primary {
+  color: $color-primary !important;
+}
+
+.text-secondary {
+  color: $color-secondary !important;
+}
+
+.text-warning {
+  color: $color-warning !important;
+}
+
+.text-success {
+  color: $color-success !important;
+}
+
+.text-error {
+  color: $color-error !important;
+}
+
+h1 {
+  font-size: 140px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h2 {
+  font-size: 100px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h3 {
+  font-size: 80px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h4 {
+  font-size: 60px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h5 {
+  font-size: 40px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h6 {
+  font-size: 26px;
+  margin: 0px;
+  padding: 10px;
+}
+
+p {
+  padding-bottom: 10px;
+  margin: 0px;
+}

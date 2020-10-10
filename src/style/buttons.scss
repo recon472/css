@@ -1,0 +1,73 @@
+// buttons
+
+button {
+  display: block;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  margin: auto;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: none;
+  outline: 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  color: $color-default-background;
+  background-color: $color-default-text;
+  font-size: 16px;
+  -webkit-transition-duration: 0.1s; /* Safari */
+  transition-duration: 0.1s;
+  text-transform: uppercase;
+}
+
+button.dynamic {
+  width: unset;
+  height: unset;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+button.light {
+  background-color: $color-light-background;
+  color: $color-light-text !important;
+}
+
+button.dark {
+  background-color: $color-dark-background;
+  color: $color-dark-text !important;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.no-touch button:active {
+  transform: scale(0.9);
+}
+
+button.flat {
+  box-shadow: none;
+}
+
+button.icon {
+  width: 50px;
+  height: 50px;
+  line-height: unset;
+}
+
+button.circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+button.text {
+  @extend button.dynamic;
+  box-shadow: none;
+  background-color: unset;
+  color: $color-default-text;
+}
