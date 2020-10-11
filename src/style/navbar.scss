@@ -86,12 +86,20 @@ html[data-scroll="0"] .navbar.transparent {
   display: none;
 }
 
+.navbar > i {
+  font-style: normal !important;
+}
+
+.navbar * i {
+  font-style: normal !important;
+}
+
 .navbar.transparent-always > .nav-menu i {
   color: $color-navbar-text-transparent !important;
 }
 
 html[data-scroll="0"] .navbar.transparent > .nav-menu i {
-  color: $color-navbar-text-transparent;
+  color: $color-navbar-text-transparent !important;
 }
 
 @media (max-width: $small-breakpoint) {

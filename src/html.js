@@ -1,7 +1,10 @@
 const format = require("xml-formatter");
 
-module.exports = (object, reference) => {
-    let html = object.$refs[reference].innerHTML.toString();
+module.exports = (object, reference, text = null) => {
+    let html = text
+    if (html == null) {
+        html = object.$refs[reference].innerHTML.toString();
+    }
     // eslint-disable-next-line
     let regExp = new RegExp(/data-v-\d+=""/g)
     html = html.replace(regExp, '')
