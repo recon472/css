@@ -6,6 +6,15 @@
   white-space: nowrap;
 }
 
+.no-touch .breadcrumb > div:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.no-touch .breadcrumb > div.disabled:hover {
+  text-decoration: none !important;
+}
+
 .breadcrumb.light {
   color: $color-light-link;
 }

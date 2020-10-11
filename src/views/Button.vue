@@ -40,7 +40,7 @@
 </template>
 
 <script>
-var format = require("xml-formatter");
+const html = require("@/html.js");
 
 export default {
   data() {
@@ -50,21 +50,10 @@ export default {
       code3: "",
     };
   },
-  methods: {
-    htmlToString(reference) {
-      return this.$refs[reference].innerHTML.toString();
-    },
-  },
   mounted() {
-    this.code1 = format("<root>" + this.htmlToString("code1") + "</root>", {
-      collapseContent: true,
-    });
-    this.code2 = format("<root>" + this.htmlToString("code2") + "</root>", {
-      collapseContent: true,
-    });
-    this.code3 = format("<root>" + this.htmlToString("code3") + "</root>", {
-      collapseContent: true,
-    });
+    this.code1 = html(this, "code1");
+    this.code2 = html(this, "code2");
+    this.code3 = html(this, "code3");
   },
 };
 </script>
