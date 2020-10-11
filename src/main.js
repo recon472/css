@@ -10,7 +10,6 @@ import Prism from "vue-prism-component";
 
 Vue.config.productionTip = false;
 
-Vue.component('navbar', () => import("@/components/NavBar.vue"))
 Vue.component('prism', Prism)
 
 new Vue({

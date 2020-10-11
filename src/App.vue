@@ -21,7 +21,7 @@
       <router-link to="/variables">Variables</router-link>
     </div>
     <div id="content">
-      <div class="page-section dynamic max-width-md ma pa-3">
+      <div class="page-section dynamic h-stretch max-width-md ma pa-3">
         <router-view />
       </div>
     </div>
