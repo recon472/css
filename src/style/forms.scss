@@ -21,8 +21,66 @@ textarea {
 }
 
 input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    border: 1px solid $color-separator;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    background-color: $color-default-background;
+
+    &:checked::after {
+        content: "";
+        position: absolute;
+        background-color: $color-default-text;
+        border: none;
+        border-radius: 4px;
+        outline: 0;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+input[type="radio"] {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    border: 1px solid $color-separator;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    background-color: $color-default-background;
+    border-radius: 50%;
+
+    &:checked::after {
+        content: "";
+        position: absolute;
+        background-color: $color-default-text;
+        border: none;
+        border-radius: 50%;
+        outline: 0;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+input[type="submit"] {
+    @extend button;
+    line-height: unset;
+}
+
+input[type="button"] {
+    @extend button;
+    line-height: unset;
 }
 
 label {

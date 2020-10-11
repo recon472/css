@@ -31,16 +31,16 @@
           <div class="content">Dark</div>
         </div>
         <div class="card border primary">
-          <div class="content">Primary</div>
+          <div class="content text-white">Primary</div>
         </div>
         <div class="card border secondary">
-          <div class="content">Secondary</div>
+          <div class="content text-white">Secondary</div>
         </div>
         <div class="card border warning">
-          <div class="content">Warning</div>
+          <div class="content text-white">Warning</div>
         </div>
         <div class="card border error">
-          <div class="content">Error</div>
+          <div class="content text-white">Error</div>
         </div>
       </div>
     </div>

@@ -1,6 +1,12 @@
+module.exports = {
+  load: load
+}
+
 window.addEventListener("click", outsideClick)
 window.addEventListener("touchend", outsideClick)
+window.addEventListener("load", load)
 
+let intervals = []
 
 function outsideClick(event) {
   // close dropdowns
@@ -26,6 +32,7 @@ function outsideClick(event) {
 
         if (content.classList.contains("show") && remove) {
           content.classList.remove("show")
+          dropdown.classList.remove("show")
         }
       }
     }
@@ -38,31 +45,36 @@ function outsideClick(event) {
   refreshButtonGroups()
 }
 
-window.addEventListener("load", () => {
+function load() {
+  for (const interval of intervals) {
+    clearInterval(interval)
+  }
+  intervals = []
+
   // add no touch class
   const body = document.getElementsByTagName("body")[0]
   body.classList.add("no-touch")
-  body.addEventListener("touchstart", function () {
+  body.ontouchstart = () => {
     body.classList.remove("no-touch")
-  })
+  }
 
   // cache scrolling for css animations and styling based on scroll position
   document.documentElement.dataset.scroll = window.scrollY;
-  document.addEventListener("scroll", () => {
+  document.onscroll = () => {
     document.documentElement.dataset.scroll = window.scrollY;
-  })
+  }
 
   // navbar menu
   let menu = document.getElementsByClassName("nav-menu")[0] || null
   let menuContent = document.getElementsByClassName("nav-menu-content")[0] || null
   if (menu != null && menuContent != null) {
-    menu.addEventListener("click", () => {
+    menu.onclick = () => {
       if (menuContent.classList.contains("show")) {
         menuContent.classList.remove("show")
       } else {
         menuContent.classList.add("show")
       }
-    })
+    }
   }
 
   // dropdowns
@@ -76,9 +88,10 @@ window.addEventListener("load", () => {
       }
     }
     if (content != null) {
-      dropdown.addEventListener("click", () => {
+      dropdown.onclick = () => {
         content.classList.toggle("show")
-      })
+        dropdown.classList.toggle("show")
+      }
     }
   }
 
@@ -87,9 +100,9 @@ window.addEventListener("load", () => {
   for (let overlayButton of overlayButtons) {
     let id = overlayButton.getAttribute("overlay")
     let overlay = document.getElementById(id)
-    overlayButton.addEventListener("click", () => {
+    overlayButton.onclick = () => {
       overlay.classList.add("show")
-    })
+    }
   }
 
   let overlays = document.getElementsByClassName("overlay")
@@ -103,9 +116,9 @@ window.addEventListener("load", () => {
       ) {
         overlayParent = overlayParent.parentNode
       }
-      button.addEventListener("click", () => {
+      button.onclick = () => {
         overlayParent.classList.remove("show")
-      })
+      }
     }
   }
 
@@ -115,7 +128,7 @@ window.addEventListener("load", () => {
 
   for (let label of scrollLabels) {
     let waitingFrames = 0
-    setInterval(() => {
+    intervals.push(setInterval(() => {
       if (label.scrollWidth > label.clientWidth) {
         if (label.scrollLeft >= label.scrollWidth - label.clientWidth) {
           if (waitingFrames < framesToWait) {
@@ -129,15 +142,15 @@ window.addEventListener("load", () => {
             waitingFrames++
           } else {
             waitingFrames = 0
-            label.scrollLeft = 1
+            label.scrollLeft = 2
           }
         } else {
-          label.scrollLeft += 1
+          label.scrollLeft += 2
         }
       } else {
         label.scrollLeft = 0
       }
-    }, 50)
+    }, 50))
   }
 
   // button group
@@ -146,15 +159,11 @@ window.addEventListener("load", () => {
   // notification
   let notifications = document.getElementsByClassName("notification")
   for (let notification of notifications) {
-    notification.addEventListener(
-      "animationend",
-      () => {
-        notification.classList.remove("show")
-      },
-      false
-    )
+    notification.onanimationend = () => {
+      notification.classList.remove("show")
+    }
   }
-})
+}
 
 function refreshButtonGroups() {
   let groups = document.getElementsByClassName("button-group")

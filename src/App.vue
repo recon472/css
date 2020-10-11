@@ -5,19 +5,23 @@
       <router-link to="/">Home</router-link>
     </div>
     <div id="menu" class="v-stack v-start h-start">
+      <div class="section">Layout</div>
+      <router-link to="/section">Section</router-link>
+      <router-link to="/pane">Pane</router-link>
+      <router-link to="/stack">Stack</router-link>
+      <div class="section">Components</div>
       <router-link to="/breadcrumb">Breadcrumb</router-link>
       <router-link to="/button">Button</router-link>
       <router-link to="/card">Card</router-link>
       <router-link to="/collection">Collection</router-link>
       <router-link to="/dropdown">Dropdown</router-link>
       <router-link to="/form">Form</router-link>
-      <router-link to="/layout">Layout</router-link>
       <router-link to="/navbar">Navbar</router-link>
       <router-link to="/notification">Notification</router-link>
       <router-link to="/overlay">Overlay</router-link>
-      <router-link to="/pane">Pane</router-link>
-      <router-link to="/section">Section</router-link>
       <router-link to="/table">Table</router-link>
+      <div class="section">Other</div>
+      <router-link to="/helpers">Helpers</router-link>
       <router-link to="/variables">Variables</router-link>
     </div>
     <div id="content">
@@ -30,9 +34,17 @@
 
 <script>
 // import style javascript logid
-require("@/style/style.js");
+const style = require("@/style/style.js");
 
-export default {};
+export default {
+  watch: {
+    $route() {
+      this.$nextTick(() => {
+        style.load();
+      });
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -62,6 +74,13 @@ body {
   overflow-y: auto;
 }
 
+.section {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
 a {
   font-weight: bold;
   color: #2c3e50;
@@ -77,5 +96,9 @@ pre {
   background-color: black !important;
   border-radius: 8px !important;
   margin: 14px !important;
+}
+
+code {
+  white-space: break-spaces !important;
 }
 </style>

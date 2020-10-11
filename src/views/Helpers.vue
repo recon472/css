@@ -1,3 +1,3 @@
 <template>
-  <div>Layout</div>
+  <div>Helpers</div>
 </template>

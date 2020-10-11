@@ -34,8 +34,8 @@ const routes = [
     component: () => import("../views/Form.vue")
   },
   {
-    path: "/layout",
-    component: () => import("../views/Layout.vue")
+    path: "/stack",
+    component: () => import("../views/Stack.vue")
   },
   {
     path: "/navbar",
@@ -64,6 +64,10 @@ const routes = [
   {
     path: "/variables",
     component: () => import("../views/Variables.vue")
+  },
+  {
+    path: "/helpers",
+    component: () => import("../views/Helpers.vue")
   }
 ];
 
