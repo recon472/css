@@ -24,6 +24,10 @@ button {
   text-transform: uppercase;
 }
 
+button > i {
+  display: block !important;
+}
+
 button.dynamic {
   width: unset;
   height: unset;
