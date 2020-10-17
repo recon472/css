@@ -3,43 +3,43 @@
     <h6 class="text-left">Navbar</h6>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
-        <iframe ref="iframe1"></iframe>
+        <iframe ref="iframe1" src="navbar.html"></iframe>
       </div>
     </div>
     <prism language="html">{{ code1 }}</prism>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
-        <iframe ref="iframe2"></iframe>
+        <iframe ref="iframe2" src="navbar.html"></iframe>
       </div>
     </div>
     <prism language="html">{{ code2 }}</prism>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
-        <iframe ref="iframe3"></iframe>
+        <iframe ref="iframe3" src="navbar.html"></iframe>
       </div>
     </div>
     <prism language="html">{{ code3 }}</prism>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
-        <iframe ref="iframe4"></iframe>
+        <iframe ref="iframe4" src="navbar.html"></iframe>
       </div>
     </div>
     <prism language="html">{{ code4 }}</prism>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
-        <iframe ref="iframe5"></iframe>
+        <iframe ref="iframe5" src="navbar.html"></iframe>
       </div>
     </div>
     <prism language="html">{{ code5 }}</prism>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
-        <iframe ref="iframe6"></iframe>
+        <iframe ref="iframe6" src="navbar.html"></iframe>
       </div>
     </div>
     <prism language="html">{{ code6 }}</prism>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
-        <iframe ref="iframe7"></iframe>
+        <iframe ref="iframe7" src="navbar.html"></iframe>
       </div>
     </div>
     <prism language="html">{{ code7 }}</prism>
@@ -62,60 +62,29 @@ export default {
     };
   },
   methods: {
-    createNavbarPage(reference, style) {
-      const iFrameDocument = this.$refs[reference].contentWindow.document;
-      iFrameDocument.open();
-      iFrameDocument.write("<html><head>");
-      for (const style of document.head.getElementsByTagName("style")) {
-        const clone = style.cloneNode(true);
-        iFrameDocument.write("<style type='text/css'>");
-        iFrameDocument.write(clone.innerHTML);
-        iFrameDocument.write("</style>");
-      }
-      iFrameDocument.write("</head>");
-      iFrameDocument.write("<body style='background-color: #0074D9;'>");
-      const html = `
-    <div class="navbar ${style} h-space-between">
-      <h6>Logo</h6>
-      <div class="h-stack gap-3 nav-menu-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-        <a href="#">Link 4</a>
-      </div>
-      <button class="nav-menu text">
-      <i>Menu</i>
-      </button>
-    </div>
-    <div class="nav v-stack" style="height: 300px;">Content</div>
-    `;
-      iFrameDocument.write(html);
-      for (const script of document.scripts) {
-        iFrameDocument.write(
-          `\x3Cscript type='text/javascript' src='${script.src}'>\x3C/script>`
+    setUpIframe(reference, variableName, css = []) {
+      this.$refs[reference].contentWindow.onload = () => {
+        const navbar = this.$refs[
+          reference
+        ].contentWindow.document.getElementsByClassName("navbar")[0];
+        for (const cssClass of css) {
+          navbar.classList.add(cssClass);
+        }
+        this[variableName] = html(
+          this,
+          this.$refs[reference].contentWindow.document.getElementById("root")
         );
-      }
-      iFrameDocument.write("</body>");
-      iFrameDocument.close();
-      return html;
+      };
     },
   },
   mounted() {
-    this.code1 = html(this, null, this.createNavbarPage("iframe1", ""));
-    this.code2 = html(this, null, this.createNavbarPage("iframe2", "absolute"));
-    this.code3 = html(
-      this,
-      null,
-      this.createNavbarPage("iframe3", "transparent")
-    );
-    this.code4 = html(
-      this,
-      null,
-      this.createNavbarPage("iframe4", "transparent-always")
-    );
-    this.code5 = html(this, null, this.createNavbarPage("iframe5", "shadow"));
-    this.code6 = html(this, null, this.createNavbarPage("iframe6", "light"));
-    this.code7 = html(this, null, this.createNavbarPage("iframe7", "dark"));
+    this.setUpIframe("iframe1", "code1");
+    this.setUpIframe("iframe2", "code2", ["absolute"]);
+    this.setUpIframe("iframe3", "code3", ["transparent"]);
+    this.setUpIframe("iframe4", "code4", ["transparent-always"]);
+    this.setUpIframe("iframe5", "code5", ["shadow"]);
+    this.setUpIframe("iframe6", "code6", ["light"]);
+    this.setUpIframe("iframe7", "code7", ["dark"]);
   },
 };
 </script>
