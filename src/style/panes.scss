@@ -37,13 +37,13 @@
   grid-template-rows: auto min-content;
 }
 
-.pane-vertical {
+.pane-horizontal {
   @extend .pane-base;
   grid-auto-flow: column;
   grid-template-columns: 1fr 1fr;
 }
 
-.pane-horizontal {
+.pane-vertical {
   @extend .pane-base;
   grid-auto-flow: row;
   grid-template-rows: 1fr 1fr;
