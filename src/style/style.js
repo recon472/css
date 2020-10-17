@@ -38,7 +38,7 @@ function outsideClick(event) {
     }
   }
   // close overlay
-  if (event.target.classList.contains("overlay")) {
+  if (event.target.classList.contains("overlay") && !event.target.classList.contains("persistent")) {
     event.target.classList.remove("show")
   }
   // refresh button groups
@@ -65,14 +65,17 @@ function load() {
   }
 
   // navbar menu
+  let navbar = document.getElementsByClassName("navbar")[0] || null
   let menu = document.getElementsByClassName("nav-menu")[0] || null
   let menuContent = document.getElementsByClassName("nav-menu-content")[0] || null
-  if (menu != null && menuContent != null) {
+  if (menu != null && menuContent != null && navbar != null) {
     menu.onclick = () => {
       if (menuContent.classList.contains("show")) {
         menuContent.classList.remove("show")
+        navbar.classList.remove("show")
       } else {
         menuContent.classList.add("show")
+        navbar.classList.add("show")
       }
     }
   }

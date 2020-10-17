@@ -72,12 +72,12 @@ html:not([data-scroll="0"]) .navbar.shadow {
   box-shadow: 0px 1px 5px 1px grey;
 }
 
-html[data-scroll="0"] .navbar.transparent {
+html[data-scroll="0"] .navbar.transparent:not(.show) {
   background-color: transparent;
   color: $color-navbar-text-transparent;
 }
 
-.navbar.transparent-always {
+.navbar.transparent-always:not(.show) {
   background-color: transparent !important;
   color: $color-navbar-text-transparent !important;
 }
@@ -94,11 +94,11 @@ html[data-scroll="0"] .navbar.transparent {
   font-style: normal !important;
 }
 
-.navbar.transparent-always > .nav-menu i {
+.navbar.transparent-always:not(.show) > .nav-menu i {
   color: $color-navbar-text-transparent !important;
 }
 
-html[data-scroll="0"] .navbar.transparent > .nav-menu i {
+html[data-scroll="0"] .navbar.transparent:not(.show) > .nav-menu i {
   color: $color-navbar-text-transparent !important;
 }
 

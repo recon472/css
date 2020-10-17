@@ -6,8 +6,8 @@
     </div>
     <div id="menu" class="v-stack v-start h-start">
       <div class="section">Layout</div>
-      <router-link to="/section">Section</router-link>
       <router-link to="/pane">Pane</router-link>
+      <router-link to="/section">Section</router-link>
       <router-link to="/stack">Stack</router-link>
       <div class="section">Components</div>
       <router-link to="/breadcrumb">Breadcrumb</router-link>

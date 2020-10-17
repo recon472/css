@@ -1,6 +1,7 @@
 <template>
   <div class="v-stack h-stretch">
     <h6 class="text-left">Navbar</h6>
+    <prism language="scss" code=".navbar { @extend .h-stack; }"> </prism>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
         <iframe ref="iframe1" src="navbar.html"></iframe>
