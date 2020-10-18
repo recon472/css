@@ -1,7 +1,9 @@
 <template>
   <div class="v-stack h-stretch">
     <h6 class="text-left">Form</h6>
+    <a class="header text-left">Classes</a>
     <prism language="scss" code=".form { @extend .v-stack; }"> </prism>
+    <a class="header text-left">Form</a>
     <div class="card border light">
       <div ref="code1" class="content h-stretch">
         <form class="gap-3 h-stretch">

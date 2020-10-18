@@ -22,6 +22,7 @@
       <router-link to="/table">Table</router-link>
       <div class="section">Other</div>
       <router-link to="/helpers">Helpers</router-link>
+      <router-link to="/text">Text</router-link>
       <router-link to="/variables">Variables</router-link>
     </div>
     <div id="content">

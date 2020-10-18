@@ -1,7 +1,9 @@
 <template>
   <div class="v-stack h-stretch">
     <h6 class="text-left">Breadcrumb</h6>
+    <a class="header text-left">Classes</a>
     <prism language="scss"> .breadcrumb { @extend .h-stack; } </prism>
+    <a class="header text-left">breadcrumb</a>
     <div class="card border light">
       <div ref="code1" class="content">
         <div class="breadcrumb">

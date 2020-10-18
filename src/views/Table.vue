@@ -32,6 +32,7 @@
       </div>
     </div>
     <prism language="html">{{ code1 }}</prism>
+    <a class="header text-left">Format columns using css grid</a>
     <prism language="css">
       .my-table-row { grid-auto-columns: 100px 1fr !important; }
     </prism>
@@ -56,5 +57,9 @@ export default {
 <style lang="scss" scoped>
 .my-table-row {
   grid-auto-columns: 100px 1fr !important;
+}
+.table {
+  background-color: white;
+  border-radius: 5px;
 }
 </style>

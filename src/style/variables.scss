@@ -3,22 +3,22 @@
 $default-margin: 10px !default;
 
 $color-separator: #ccc !default;
-$color-selected-background: gray;
-$color-selected-text: white;
-$color-highlight: #e4e5e8;
+$color-selected-background: #484a51 !default;
+$color-selected-text: white !default;
+$color-highlight: #e4e5e8 !default;
 
-$color-default-text: black;
-$color-default-background: white;
+$color-default-text: black !default;
+$color-default-background: white !default;
 $color-default-link: #1976d2 !default;
 $color-default-disabled: #a9a9a9 !default;
 
-$color-light-text: #1c1c1c;
-$color-light-background: #eee;
+$color-light-text: #1c1c1c !default;
+$color-light-background: #eee !default;
 $color-light-link: red !default;
 $color-light-disabled: green !default;
 
-$color-dark-text: #eee;
-$color-dark-background: #1c1c1c;
+$color-dark-text: #eee !default;
+$color-dark-background: #1c1c1c !default;
 $color-dark-link: yellow !default;
 $color-dark-disabled: pink !default;
 
@@ -138,4 +138,10 @@ h6 {
 p {
   padding-bottom: 10px;
   margin: 0px;
+}
+
+a.header {
+  padding: 10px;
+  padding-top: 20px;
+  margin: 0;
 }

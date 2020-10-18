@@ -1,6 +1,7 @@
 <template>
   <div class="v-stack h-stretch">
     <h6 class="text-left">Pane</h6>
+    <a class="header text-left">Classes</a>
     <prism
       language="scss"
       code=".pane-left { @extend .h-stack; }
@@ -11,6 +12,7 @@
 .pane-horizontal { @extend .h-stack; }"
     >
     </prism>
+    <a class="header text-left">pane-left</a>
     <div class="card border light">
       <div ref="code1" class="content h-stretch">
         <div class="pane-left">
@@ -20,6 +22,7 @@
       </div>
     </div>
     <prism language="html">{{ code1 }}</prism>
+    <a class="header text-left">pane-right</a>
     <div class="card border light">
       <div ref="code2" class="content h-stretch">
         <div class="pane-right">
@@ -29,6 +32,7 @@
       </div>
     </div>
     <prism language="html">{{ code2 }}</prism>
+    <a class="header text-left">pane-top</a>
     <div class="card border light">
       <div ref="code3" class="content h-stretch">
         <div class="pane-top">
@@ -38,6 +42,7 @@
       </div>
     </div>
     <prism language="html">{{ code3 }}</prism>
+    <a class="header text-left">pane-bottom</a>
     <div class="card border light">
       <div ref="code4" class="content h-stretch">
         <div class="pane-bottom">
@@ -47,6 +52,7 @@
       </div>
     </div>
     <prism language="html">{{ code4 }}</prism>
+    <a class="header text-left">pane-vertical</a>
     <div class="card border light">
       <div ref="code5" class="content h-stretch">
         <div class="pane-vertical">
@@ -56,6 +62,7 @@
       </div>
     </div>
     <prism language="html">{{ code5 }}</prism>
+    <a class="header text-left">pane-horizontal</a>
     <div class="card border light">
       <div ref="code6" class="content h-stretch">
         <div class="pane-horizontal">

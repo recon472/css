@@ -1,6 +1,7 @@
 <template>
   <div class="v-stack">
     <h6 class="text-left">Button</h6>
+    <a class="header text-left">Types</a>
     <div class="card border light">
       <div class="content">
         <div ref="code1" class="h-stack gap-3">
@@ -16,6 +17,7 @@
       </div>
     </div>
     <prism language="html">{{ code1 }}</prism>
+    <a class="header text-left">Colors</a>
     <div class="card border light">
       <div class="content">
         <div ref="code2" class="h-stack gap-3">

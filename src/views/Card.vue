@@ -1,6 +1,7 @@
 <template>
   <div class="v-stack h-stretch">
     <h6 class="text-left">Card</h6>
+    <a class="header text-left">Classes</a>
     <prism
       language="scss"
       code=".card { @extend .v-stack; } 
@@ -9,6 +10,7 @@
 .footer { @extend .h-stack; }"
     >
     </prism>
+    <a class="header text-left">card - header, content, footer</a>
     <div class="card border light">
       <div ref="code1" class="content h-space-around">
         <div class="card">
@@ -30,6 +32,7 @@
       </div>
     </div>
     <prism language="html">{{ code1 }}</prism>
+    <a class="header text-left">Colors</a>
     <div class="card light border">
       <div ref="code2" class="content">
         <div class="card border light">

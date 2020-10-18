@@ -1,6 +1,7 @@
 <template>
   <div class="v-stack h-stretch">
     <h6 class="text-left">Stack</h6>
+    <a class="header text-left">v-stack</a>
     <div class="card border light">
       <div ref="code1" class="content h-stretch">
         <div class="v-stack">
@@ -13,6 +14,7 @@
       </div>
     </div>
     <prism language="html">{{ code1 }}</prism>
+    <a class="header text-left">h-stack</a>
     <div class="card border light">
       <div ref="code2" class="content h-space-around">
         <div class="h-stack">
@@ -25,7 +27,7 @@
       </div>
     </div>
     <prism language="html">{{ code2 }}</prism>
-    <h6 class="text-left">Alignment</h6>
+    <a class="header text-left">Alignment</a>
     <div class="pane-horizontal">
       <prism
         language="scss"
@@ -48,7 +50,7 @@
 .v-space-evenly {}"
       ></prism>
     </div>
-
+    <a class="header text-left">Complex layout</a>
     <div class="card border light">
       <div ref="code3" class="content h-stretch v-stretch">
         <div class="h-stack h-stretch v-stretch">

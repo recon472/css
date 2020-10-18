@@ -1,6 +1,7 @@
 <template>
   <div class="v-stack h-stretch">
     <h6 class="text-left">Collection</h6>
+    <a class="header text-left">4 rows, responsive</a>
     <div class="card light border">
       <div ref="code1" class="content h-stretch v-stretch">
         <div class="collection">
@@ -22,6 +23,7 @@
       </div>
     </div>
     <prism language="html">{{ code1 }}</prism>
+    <a class="header text-left">5 rows, responsive</a>
     <div class="card border light">
       <div ref="code2" class="content h-stretch v-stretch">
         <div class="collection-5">

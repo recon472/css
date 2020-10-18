@@ -10,6 +10,7 @@
       </div>
     </div>
     <prism language="html">{{ code1 }}</prism>
+    <a class="header text-left">Javascript</a>
     <prism language="javascript">{{ code2 }}</prism>
   </div>
 </template>

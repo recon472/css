@@ -68,6 +68,10 @@ const routes = [
   {
     path: "/helpers",
     component: () => import("../views/Helpers.vue")
+  },
+  {
+    path: "/text",
+    component: () => import("../views/Text.vue")
   }
 ];
 

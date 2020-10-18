@@ -1,43 +1,51 @@
 <template>
   <div class="v-stack h-stretch">
     <h6 class="text-left">Navbar</h6>
+    <a class="header text-left">Classes</a>
     <prism language="scss" code=".navbar { @extend .h-stack; }"> </prism>
+    <a class="header text-left">Fixed opaque navbar</a>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
         <iframe ref="iframe1" src="navbar.html"></iframe>
       </div>
     </div>
     <prism language="html">{{ code1 }}</prism>
+    <a class="header text-left">Scrolling navbar</a>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
         <iframe ref="iframe2" src="navbar.html"></iframe>
       </div>
     </div>
     <prism language="html">{{ code2 }}</prism>
+    <a class="header text-left">Transparent when page is all the way up</a>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
         <iframe ref="iframe3" src="navbar.html"></iframe>
       </div>
     </div>
     <prism language="html">{{ code3 }}</prism>
+    <a class="header text-left">Always transparent</a>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
         <iframe ref="iframe4" src="navbar.html"></iframe>
       </div>
     </div>
     <prism language="html">{{ code4 }}</prism>
+    <a class="header text-left">Shadow underneath</a>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
         <iframe ref="iframe5" src="navbar.html"></iframe>
       </div>
     </div>
     <prism language="html">{{ code5 }}</prism>
+    <a class="header text-left">Light navbar</a>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
         <iframe ref="iframe6" src="navbar.html"></iframe>
       </div>
     </div>
     <prism language="html">{{ code6 }}</prism>
+    <a class="header text-left">Dark navbar</a>
     <div class="card border light">
       <div class="content h-stretch v-stretch">
         <iframe ref="iframe7" src="navbar.html"></iframe>
