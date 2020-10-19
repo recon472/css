@@ -1,6 +1,6 @@
 <template>
   <div class="v-stack h-stretch">
-    <h6 class="text-left">Table</h6>
+    <h1 class="h6 text-left">Table</h1>
     <div class="card border light">
       <div ref="code1" class="content h-stretch v-stretch">
         <div class="table">

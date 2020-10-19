@@ -1,6 +1,6 @@
 <template>
   <div class="v-stack">
-    <h3>Homepage</h3>
-    <h5>CSS Framework</h5>
+    <h1 class="h3">Homepage</h1>
+    <h2 class="h4">CSS Framework</h2>
   </div>
 </template>

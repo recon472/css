@@ -1,6 +1,6 @@
 <template>
   <div class="v-stack h-stretch">
-    <h6 class="text-left">Card</h6>
+    <h1 class="h6 text-left">Card</h1>
     <a class="header text-left">Classes</a>
     <prism
       language="scss"

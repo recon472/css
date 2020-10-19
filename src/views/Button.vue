@@ -1,6 +1,6 @@
 <template>
   <div class="v-stack">
-    <h6 class="text-left">Button</h6>
+    <h1 class="h6 text-left">Button</h1>
     <a class="header text-left">Types</a>
     <div class="card border light">
       <div class="content">

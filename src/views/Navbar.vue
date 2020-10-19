@@ -1,6 +1,6 @@
 <template>
   <div class="v-stack h-stretch">
-    <h6 class="text-left">Navbar</h6>
+    <h1 class="h6 text-left">Navbar</h1>
     <a class="header text-left">Classes</a>
     <prism language="scss" code=".navbar { @extend .h-stack; }"> </prism>
     <a class="header text-left">Fixed opaque navbar</a>

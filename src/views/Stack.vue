@@ -1,6 +1,6 @@
 <template>
   <div class="v-stack h-stretch">
-    <h6 class="text-left">Stack</h6>
+    <h1 class="h6 text-left">Stack</h1>
     <p class="text-left">
       Stack is the base element that most layout elements extend. Therefore use
       the same stack concept for the whole layout.

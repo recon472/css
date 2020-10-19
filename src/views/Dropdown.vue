@@ -1,6 +1,6 @@
 <template>
   <div class="v-stack h-stretch">
-    <h6 class="text-left">Dropdown</h6>
+    <h1 class="h6 text-left">Dropdown</h1>
     <div class="card border light">
       <div ref="code1" class="content">
         <button class="dropdown">

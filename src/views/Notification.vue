@@ -1,6 +1,6 @@
 <template>
   <div class="v-stack h-stretch">
-    <h6 class="text-left">Notification</h6>
+    <h1 class="h6 text-left">Notification</h1>
     <div class="card border light">
       <div ref="code1" class="content">
         <div id="notification" class="notification"></div>
@@ -22,6 +22,7 @@ export default {
   data() {
     return {
       code1: "",
+      code2: "",
     };
   },
   methods: {

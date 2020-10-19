@@ -1,8 +1,8 @@
 <template>
   <div id="pane" class="pane-left nav-full separator">
     <div class="navbar separator h-space-between">
-      <div>CSS</div>
-      <router-link to="/">Home</router-link>
+      <div class="h5">CSS</div>
+      <router-link class="ma" to="/">Home</router-link>
     </div>
     <div id="menu" class="v-stack v-start h-start">
       <div class="section">Layout</div>

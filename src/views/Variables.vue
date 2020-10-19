@@ -1,6 +1,6 @@
 <template>
   <div class="v-stack h-stretch">
-    <h6 class="text-left">Variables</h6>
+    <h1 class="h6 text-left">Variables</h1>
     <a class="header text-left">Default values</a>
     <prism
       language="scss"
@@ -13,7 +13,7 @@ $color-highlight: #e4e5e8 !default;
 
 $color-default-text: black !default;
 $color-default-background: white !default;
-$color-default-link: #1976d2 !default;
+$color-default-link: #484a51 !default;
 $color-default-disabled: #a9a9a9 !default;
 
 $color-light-text: #1c1c1c !default;
@@ -40,7 +40,13 @@ $large-breakpoint: 992px !default;
 $extra-large-breakpoint: 1200px !default;
 
 $section-height: 600px !default;
-$navbar-height: 70px !default;"
+$navbar-height: 70px !default;
+
+$step-1: 3px !default;
+$step-2: 6px !default;
+$step-3: 12px !default;
+$step-4: 18px !default;
+$step-5: 24px !default;"
     >
     </prism>
     <a class="header text-left">Override</a>

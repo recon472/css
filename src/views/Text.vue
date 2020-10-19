@@ -1,6 +1,6 @@
 <template>
   <div class="v-stack h-stretch">
-    <h6 class="text-left">Text</h6>
+    <h1 class="h6 text-left">Text</h1>
     <a class="header text-left">Alignment</a>
     <prism
       language="scss"
@@ -49,16 +49,34 @@
     </div>
     <a class="header text-left">Headings</a>
     <div class="card light border">
-      <div class="content">
+      <div ref="code1" class="content">
         <div class="v-stack">
-          <h1>Heading 1</h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
+          <h1 class="h1">Heading 1</h1>
+          <h1 class="h2">Heading 2</h1>
+          <h1 class="h3">Heading 3</h1>
+          <h1 class="h4">Heading 4</h1>
+          <h1 class="h5">Heading 5</h1>
+          <h1 class="h6">Heading 6</h1>
+          <h1 class="h7">Heading 7</h1>
+          <h1 class="h8">Heading 8</h1>
         </div>
       </div>
     </div>
+    <prism language="html">{{ code1 }}</prism>
   </div>
 </template>
+
+<script>
+const html = require("@/html.js");
+
+export default {
+  data() {
+    return {
+      code1: "",
+    };
+  },
+  mounted() {
+    this.code1 = html(this, "code1");
+  },
+};
+</script>

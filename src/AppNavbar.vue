@@ -1,7 +1,7 @@
 <template>
   <div id="root">
     <div class="navbar h-space-between">
-      <h6>Logo</h6>
+      <h1 class="h6">Logo</h1>
       <div class="h-stack gap-3 nav-menu-content">
         <a href="#">Link 1</a>
         <a href="#">Link 2</a>

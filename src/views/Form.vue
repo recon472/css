@@ -1,6 +1,6 @@
 <template>
   <div class="v-stack h-stretch">
-    <h6 class="text-left">Form</h6>
+    <h1 class="h6 text-left">Form</h1>
     <a class="header text-left">Classes</a>
     <prism language="scss" code=".form { @extend .v-stack; }"> </prism>
     <a class="header text-left">Form</a>

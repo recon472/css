@@ -1,6 +1,6 @@
 <template>
   <div class="v-stack h-stretch">
-    <h6 class="text-left">Collection</h6>
+    <h1 class="h6 text-left">Collection</h1>
     <a class="header text-left">4 columns, responsive</a>
     <div class="card light border">
       <div ref="code1" class="content h-stretch v-stretch">
