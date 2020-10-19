@@ -82,17 +82,6 @@ body {
   padding-bottom: 5px;
 }
 
-a {
-  font-weight: bold;
-  color: #2c3e50;
-  text-decoration: none;
-
-  &.router-link-exact-active {
-    color: #42b983;
-    text-decoration: underline;
-  }
-}
-
 pre {
   background-color: black !important;
   border-radius: 8px !important;

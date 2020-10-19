@@ -9,7 +9,7 @@ $color-highlight: #e4e5e8 !default;
 
 $color-default-text: black !default;
 $color-default-background: white !default;
-$color-default-link: #1976d2 !default;
+$color-default-link: #484a51 !default;
 $color-default-disabled: #a9a9a9 !default;
 
 $color-light-text: #1c1c1c !default;
@@ -37,6 +37,12 @@ $extra-large-breakpoint: 1200px !default;
 
 $section-height: 600px !default;
 $navbar-height: 70px !default;
+
+$step-1: 3px !default;
+$step-2: 6px !default;
+$step-3: 12px !default;
+$step-4: 18px !default;
+$step-5: 24px !default;
 
 html,
 body {
@@ -136,7 +142,7 @@ h6 {
 }
 
 p {
-  padding-bottom: 10px;
+  padding: 10px;
   margin: 0px;
 }
 
@@ -144,4 +150,15 @@ a.header {
   padding: 10px;
   padding-top: 20px;
   margin: 0;
+}
+
+a {
+  font-weight: bold;
+  color: $color-default-link;
+  text-decoration: none;
+
+  &.router-link-exact-active {
+    color: $color-primary;
+    text-decoration: underline;
+  }
 }

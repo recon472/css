@@ -73,19 +73,27 @@
 }
 
 .gap-0 {
-  gap: 3px;
+  gap: 0px;
 }
 
 .gap-1 {
-  gap: 6px;
+  gap: $step-1;
 }
 
 .gap-2 {
-  gap: 12px;
+  gap: $step-2;
 }
 
 .gap-3 {
-  gap: 18px;
+  gap: $step-3;
+}
+
+.gap-4 {
+  gap: $step-4;
+}
+
+.gap-5 {
+  gap: $step-5;
 }
 
 @media (max-width: $small-breakpoint) {
