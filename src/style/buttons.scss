@@ -24,6 +24,41 @@ button {
   text-transform: uppercase;
 }
 
+button.xs {
+  width: 60px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 8px;
+}
+
+button.sm {
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+button.md {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+}
+
+button.lg {
+  width: 180px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 22px;
+}
+
+button.xl {
+  width: 210px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 26px;
+}
+
 button > i {
   display: block !important;
 }

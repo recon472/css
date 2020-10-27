@@ -38,6 +38,20 @@
       </div>
     </div>
     <prism language="html">{{ code3 }}</prism>
+    <a class="header text-left">Sizes</a>
+    <div class="card border light">
+      <div class="content">
+        <div ref="code4" class="h-stack gap-3">
+          <button class="xs">XSmall</button>
+          <button class="sm">Small</button>
+          <button class="md">Medium</button>
+          <button>Normal</button>
+          <button class="lg">Large</button>
+          <button class="xl">XLarge</button>
+        </div>
+      </div>
+    </div>
+    <prism language="html">{{ code4 }}</prism>
   </div>
 </template>
 
@@ -50,12 +64,14 @@ export default {
       code1: "",
       code2: "",
       code3: "",
+      code4: "",
     };
   },
   mounted() {
     this.code1 = html(this, "code1");
     this.code2 = html(this, "code2");
     this.code3 = html(this, "code3");
+    this.code4 = html(this, "code4");
   },
 };
 </script>
