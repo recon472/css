@@ -64,8 +64,8 @@ button > i {
 }
 
 button.dynamic {
-  width: unset;
-  height: unset;
+  width: unset !important;
+  height: unset !important;
   padding-left: 20px;
   padding-right: 20px;
 }

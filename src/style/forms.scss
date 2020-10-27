@@ -10,6 +10,10 @@ input {
     border: 1px solid $color-separator;
 }
 
+input::placeholder {
+    color: $color-default-disabled;
+}
+
 textarea {
     border-radius: 4px;
     box-sizing: border-box;
