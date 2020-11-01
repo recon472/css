@@ -11,6 +11,12 @@
             This is a very long text that doesn't fit the label and therefore is
             autoscrolled
           </label>
+          <label class="text-left">Select</label>
+          <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
           <label class="text-left">Input Text</label>
           <input type="text" />
           <label class="text-left">Password</label>
