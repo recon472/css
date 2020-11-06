@@ -16,14 +16,19 @@
     </prism>
     <p>
       max-width-x classes to limit the maximum-width to a breakpoint. Works
-      wonders with sections and ma class.
+      wonders with sections and ma class. There is also min-width-x.
     </p>
     <prism
       language="scss"
       code=".max-width-sm {  } // small
 .max-width-md {  } // medium
 .max-width-lg {  } // large
-.max-width-xl {  } // extra large"
+.max-width-xl {  } // extra large
+
+.min-width-sm {  } // small
+.min-width-md {  } // medium
+.min-width-lg {  } // large
+.min-width-xl {  } // extra large"
     >
     </prism>
     <a class="header text-left">Scroll content (overflow)</a>
