@@ -85,11 +85,11 @@ button.dark {
   color: $color-dark-text !important;
 }
 
-button:hover {
+.no-touch button:hover {
   opacity: 0.7;
 }
 
-.no-touch button:active {
+button:active {
   transform: scale(0.9);
 }
 
