@@ -5,8 +5,7 @@
     <prism
       language="scss"
       code=".drag-overlay { @extend .v-stack; }
-.handle { @extend .v-stack; }
-.absolute { position: absolute }"
+.handle { @extend .v-stack; }"
     >
     </prism>
     <div class="card border light">
@@ -21,7 +20,7 @@
     <prism language="html">{{ code1 }}</prism>
     <div class="card border light">
       <div ref="code2" class="content h-space-around">
-        <div class="drag-overlay absolute">
+        <div class="drag-overlay">
           <div class="handle">
             <p>Handle</p>
           </div>

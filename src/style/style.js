@@ -130,6 +130,24 @@ function load() {
   for (const dragOverlay of dragOverlays) {
     const handles = dragOverlay.getElementsByClassName("handle")
     if (handles.length > 0) {
+      const clampXY = (x, y) => {
+        const padding = 10
+        let positionX = Math.max(padding, x)
+        positionX = Math.min(window.innerWidth - dragOverlay.getBoundingClientRect().width - padding, positionX)
+        let positionY = Math.max(padding, y)
+        positionY = Math.min(window.innerHeight - dragOverlay.getBoundingClientRect().height - padding, positionY)
+        return {
+          x: positionX,
+          y: positionY
+        }
+      }
+
+      window.addEventListener("resize", () => {
+        const clampedPosition = clampXY(dragOverlay.offsetLeft, dragOverlay.offsetTop)
+        dragOverlay.style.top = clampedPosition.y + "px";
+        dragOverlay.style.left = clampedPosition.x + "px";
+      })
+
       const handle = handles[0]
       handle.onmousedown = (event) => {
         let xLast = event.clientX
@@ -141,15 +159,11 @@ function load() {
           const deltaY = yLast - event.clientY
           xLast = event.clientX
           yLast = event.clientY
-          let positionX = dragOverlay.offsetLeft - deltaX
-          let positionY = dragOverlay.offsetTop - deltaY
-          const padding = 10
-          positionX = Math.max(padding, positionX)
-          positionX = Math.min(window.innerWidth - dragOverlay.getBoundingClientRect().width - padding, positionX)
-          positionY = Math.max(padding, positionY)
-          positionY = Math.min(window.innerHeight - dragOverlay.getBoundingClientRect().height - padding, positionY)
-          dragOverlay.style.top = positionY + "px";
-          dragOverlay.style.left = positionX + "px";
+          const positionX = dragOverlay.offsetLeft - deltaX
+          const positionY = dragOverlay.offsetTop - deltaY
+          const clampedPosition = clampXY(positionX, positionY)
+          dragOverlay.style.top = clampedPosition.y + "px";
+          dragOverlay.style.left = clampedPosition.x + "px";
         }
         document.onmouseup = () => {
           document.onmouseup = null
