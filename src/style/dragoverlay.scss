@@ -1,0 +1,14 @@
+.drag-overlay {
+    @extend .v-stack;
+    position: fixed;
+    z-index: 10;
+}
+
+.drag-overlay.absolute {
+    @extend .v-stack;
+    position: absolute;
+}
+
+.drag-overlay > .handle {
+    cursor: move;
+}

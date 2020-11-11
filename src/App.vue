@@ -14,6 +14,7 @@
       <router-link to="/button">Button</router-link>
       <router-link to="/card">Card</router-link>
       <router-link to="/collection">Collection</router-link>
+      <router-link to="/dragoverlay">Drag Overlay</router-link>
       <router-link to="/dropdown">Dropdown</router-link>
       <router-link to="/form">Form</router-link>
       <router-link to="/navbar">Navbar</router-link>

@@ -30,6 +30,10 @@ const routes = [
     component: () => import("../views/Dropdown.vue")
   },
   {
+    path: "/dragoverlay",
+    component: () => import("../views/DragOverlay.vue")
+  },
+  {
     path: "/form",
     component: () => import("../views/Form.vue")
   },

@@ -125,6 +125,40 @@ function load() {
     }
   }
 
+  // drag overlay
+  const dragOverlays = document.getElementsByClassName("drag-overlay")
+  for (const dragOverlay of dragOverlays) {
+    const handles = dragOverlay.getElementsByClassName("handle")
+    if (handles.length > 0) {
+      const handle = handles[0]
+      handle.onmousedown = (event) => {
+        let xLast = event.clientX
+        let yLast = event.clientY
+
+        event.preventDefault()
+        document.onmousemove = (event) => {
+          const deltaX = xLast - event.clientX
+          const deltaY = yLast - event.clientY
+          xLast = event.clientX
+          yLast = event.clientY
+          let positionX = dragOverlay.offsetLeft - deltaX
+          let positionY = dragOverlay.offsetTop - deltaY
+          const padding = 10
+          positionX = Math.max(padding, positionX)
+          positionX = Math.min(window.innerWidth - dragOverlay.getBoundingClientRect().width - padding, positionX)
+          positionY = Math.max(padding, positionY)
+          positionY = Math.min(window.innerHeight - dragOverlay.getBoundingClientRect().height - padding, positionY)
+          dragOverlay.style.top = positionY + "px";
+          dragOverlay.style.left = positionX + "px";
+        }
+        document.onmouseup = () => {
+          document.onmouseup = null
+          document.onmousemove = null
+        }
+      }
+    }
+  }
+
   // set up autoscrolling labels
   let scrollLabels = document.getElementsByClassName("scroll-label")
   const framesToWait = 60
